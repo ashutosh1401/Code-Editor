@@ -11,7 +11,7 @@ module.exports = {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.java');
     } else if (language === 'c') {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.c');
-    } else if (language === 'c++') {
+    } else if (language === 'cpp') {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.cpp');
     } else if (language === 'javascript') {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.js');

@@ -1,6 +1,7 @@
 const path = require('path');
 const apiFile = require('../api/apiFile')
 const RunnerC = require('../compiler/RunnerC')
+const RunnerCpp = require('../compiler/RunnerCpp')
  
 function Factory() {
   this.createRunner = function createRunner(lang) {
@@ -8,6 +9,9 @@ function Factory() {
  
     if (lang === 'c') {
       runner = new RunnerC();
+    }
+    else if (lang === 'cpp') {
+      runner = new RunnerCpp()
     } 
     return runner;
   };

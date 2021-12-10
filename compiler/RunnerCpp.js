@@ -2,19 +2,18 @@ const {spawn} = require('child_process')
 const Runner = require('./Runner')
 const path = require('path')
 
-class RunnerC extends Runner {
+class RunnerCpp extends Runner {
     defaultFile() {
-        return this.defaultfile
+        return this.defaultfile;
     }
 
     constructor() {
         super();
-        this.defaultfile = 'hello.c'
+        this.defaultfile = 'Hello.cpp'
     }
 
-    
     run(file,directory,filename,extension,callback) {
-        if(extension.toLowerCase()!=='.c') {
+        if(extension.toLowerCase()!=='.cpp') {
             console.log(`${file} is not a c file.`);
             return;
         }
@@ -32,7 +31,7 @@ class RunnerC extends Runner {
         argsCompile[2] = path.join(directory,`${filename}`);
         console.log(`argsCompile:${argsCompile}`);
 
-        const compiler = spawn('gcc',argsCompile)
+        const compiler = spawn('g++',argsCompile)
         compiler.stdout.on('data', (data) => {
 
             console.log(`stdout: ${data}`);
@@ -80,4 +79,4 @@ class RunnerC extends Runner {
       }
 }
 
-module.exports = RunnerC;
+module.exports = RunnerCpp
