@@ -13,9 +13,9 @@ module.exports = {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.c');
     } else if (language === 'cpp') {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.cpp');
-    } else if (language === 'javascript') {
+    } else if (language === 'js') {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.js');
-    } else if (language === 'python') {
+    } else if (language === 'py') {
       file = path.join(__dirname, '../compiler/temp/', 'Hello.py');
     } else {
       callback('');

@@ -3,7 +3,8 @@ const apiFile = require('../api/apiFile')
 const RunnerC = require('../compiler/RunnerC')
 const RunnerCpp = require('../compiler/RunnerCpp')
 const RunnerJava = require('../compiler/RunnerJava')
- 
+const RunnerJS = require('../compiler/RunnerJS')
+
 function Factory() {
   this.createRunner = function createRunner(lang) {
     let runner;
@@ -16,7 +17,10 @@ function Factory() {
     } 
     else if (lang === 'java') {
       runner = new RunnerJava()
-    } 
+    }
+    else if (lang === 'js') {
+      runner = new RunnerJS()
+    }  
     return runner;
   };
 }
