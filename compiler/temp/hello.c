@@ -4,6 +4,6 @@ int main()
 
 {
 
- printf("Hello C from Ashutosh!\n");
+ printf("Hello C from Ashutosh okkkk!\n");
 
 }

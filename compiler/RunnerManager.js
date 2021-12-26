@@ -4,6 +4,7 @@ const RunnerC = require('../compiler/RunnerC')
 const RunnerCpp = require('../compiler/RunnerCpp')
 const RunnerJava = require('../compiler/RunnerJava')
 const RunnerJS = require('../compiler/RunnerJS')
+const RunnerPy = require('../compiler/RunnerPy')
 
 function Factory() {
   this.createRunner = function createRunner(lang) {
@@ -20,6 +21,9 @@ function Factory() {
     }
     else if (lang === 'js') {
       runner = new RunnerJS()
+    }
+    else if (lang === 'py') {
+      runner = new RunnerPy()
     }  
     return runner;
   };
